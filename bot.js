@@ -504,7 +504,7 @@ let y3Filter = (reaction, user) => reaction.emoji.name === '🇩' && user.id ===
       
                                                     
                                y3.on("collect", r => {
-                                   message.member.addRole(message.guild.roles.find("name", "17"))
+                                   message.member.addRole(message.guild.roles.find("name", "7"))
                                    
                                    
 message.channel.sendMessage("", {embed: {
@@ -594,9 +594,7 @@ message.channel.sendMessage("", {embed: {
 })
 })
 })
-})
-                               
-                                   })
+
        }
                                    
                                    }); 

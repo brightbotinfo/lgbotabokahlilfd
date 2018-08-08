@@ -95,8 +95,8 @@ client.on('message', msg => {
           if (msg.guild.channels.find('name', 'warns')) {
  
             msg.guild.channels.find('name', 'warns').send(`
-          تم اعطائك تنبيه : ${msg.mentions.members.first()}
-          لأنك قمت بما يلي
+         لقد تلقيت انذاراً: ${msg.mentions.members.first()}
+          وذلك بسبب
           ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
           `)
           }
@@ -112,13 +112,13 @@ client.on('message', message => {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
-    if (!args[1]) {
+    if (!pro) {
 return;
 }
         message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
-            .addField(' » الرسالة : ', args)
+            .addField(' » الرسالة : ', pro)
             .setColor('#ff0000')
             m.send(`${m}`,{embed: bc});
         });
@@ -292,7 +292,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('يج�
 
 
 client.on("message", message => {
-      if (message.content === "ping") {
+      if (message.content === "$ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('** : سرعة الإتصال هي**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -311,7 +311,7 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
   if (command == "ban") {
-               if(!message.channel.guild) return message.reply('** هذه الأوامر تستعمل فقط في السيرفرات**');
+               if(!message.channel.guild) return message.reply('**هذه الأوامر تستعمل فقط في سيرفر ليجند**');
          
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**لست من المشرفين فلا يمكنك حظر الأعضاء**");
   if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**البوت لا يملك خاصية ` BAN_MEMBERS ` وشكرا**");
@@ -354,13 +354,13 @@ codes.push(`discord.gg/${invite.code}`)
 if (codes.length < 0) {
     var embed = new Discord.RichEmbed()
 .setColor("#000000")
-.addField(`Your invite codes in ${message.guild.name}`, `You currently don't have any active invites! Please create an invite and start inviting, then you will be able to see your codes here!`)
+.addField(`جميع الدعوات التي انشأتها ${message.guild.name}`, `You currently don't have any active invites! Please create an invite and start inviting, then you will be able to see your codes here!`)
 message.author.send({ embed: embed });
 return;
 } else {
     var embed = new Discord.RichEmbed()
 .setColor("#000000")
-.addField(`Your invite codes in ${message.guild.name}`, `Invite Codes:\n${codes.join("\n")}`)
+.addField(`=-=-=-=-=-=-=-=-=- ${message.guild.name}`, `Invite Codes:\n${codes.join("\n")}`)
 message.author.send({ embed: embed });
 return;
 }
@@ -807,17 +807,17 @@ client.on('message', message => {
 ╚[❖══════════════════════❖]╝
 
 
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ $avatar ➾ لإرسال صورتك او صورة من تمنشنه
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ $colors ➾ لتغيير لونك في لسيرفر
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ $ping ➾ لمعرفة سرعة اتصال البوت
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ $info ➾ لمعرفة نبذه عنك
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ $myinv ➾ لمعرفة عدد الدعوات الخاصة بك
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  .:::: LG Server ::::.
 
 `);
@@ -851,7 +851,9 @@ client.on('message', message => {
 ╚[❖══════════════════════❖]╝
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $kick <mention > ➾ لطرد الأعضاء
+ ❖ $kick <mention> <reason> ➾ لطرد الأعضاء
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ ❖ $ban <mention> <reason> ➾ لحظر الأعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  ❖ $clear ➾ لمسح الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
@@ -861,15 +863,13 @@ client.on('message', message => {
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
  ❖ $bc <message> ➾ لإرسال رسالة جماعية
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $closeroms <message> ➾ لإغلاق الشات
+ ❖ $closeroms ➾ لإغلاق الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
- ❖ $openroms <message> ➾ لفتح الشات
+ ❖ $openroms  ➾ لفتح الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $server <message> ➾ لمعرفة نبذه عن السيرفر
+ ❖ $server  ➾ لمعرفة نبذه عن السيرفر
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $warn <message> ➾ لإعطاء انذار لأحد الأعضاء
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $clear <message> ➾ لمسح الشات
+ ❖ $warn  <mention> <reason> ➾ لإعطاء انذار لأحد الأعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 By abokhalil

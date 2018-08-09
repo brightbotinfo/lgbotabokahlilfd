@@ -824,8 +824,7 @@ client.on('message', message => {
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('discord.gg')){
-        message.delete()	 
-   if(!message.channel.guild) return message.reply('**بسم الله ما شاء الله على الذكاء .. تبي البوت يدخل سيرفرك ؟ 😂🤣**');
+        message.delete(10000)	 
    message.channel.sendMessage("", {embed: {
         title: "لا تنشر",
         color: 0x06DF00,

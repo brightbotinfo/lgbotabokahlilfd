@@ -824,7 +824,7 @@ client.on('message', message => {
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('discord.gg')){
-        message.delete(10000)	 
+        message.delete()	 
    message.channel.sendMessage("", {embed: {
         title: "لا تنشر",
         color: 0x06DF00,
@@ -957,7 +957,8 @@ const Embed11 = new Discord.RichEmbed()
 .setAuthor(abokhalil.guild.name, abokhalil.guild.iconURL)
 .setDescription(`          <@${men.id}>
 لقد تم اعطائه الميوت الكتابي بنجاح
-بواسطة : <@${abokhalil.author.id}> `)
+بواسطة : <@${abokhalil.author.id}>
+By Abokhalil `)
 abokhalil.channel.sendEmbed(Embed11).then(abokhalil => {abokhalil.delete(6000)})
     }
 })

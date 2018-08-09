@@ -858,15 +858,15 @@ client.on('message', message => {
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ $avatar ➾ لإرسال صورتك او صورة من تمنشنه
+❖ -avatar ➾ لإرسال صورتك او صورة من تمنشنه
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ $color ➾ لتغيير لونك في لسيرفر
+❖ -color ➾ لتغيير لونك في لسيرفر
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ $ping ➾ لمعرفة سرعة اتصال البوت
+❖ -ping ➾ لمعرفة سرعة اتصال البوت
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ $info ➾ لمعرفة نبذه عنك
+❖ -info ➾ لمعرفة نبذه عنك
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ $myinv ➾ لمعرفة عدد الدعوات الخاصة بك
+❖ -myinv ➾ لمعرفة عدد الدعوات الخاصة بك
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  .:::: LG Server ::::.
 
@@ -901,25 +901,25 @@ client.on('message', message => {
 ╚[❖══════════════════════❖]╝
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $kick <mention> <reason> ➾ لطرد الأعضاء
+ ❖ -kick <mention> <reason> ➾ لطرد الأعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $ban <mention> <reason> ➾ لحظر الأعضاء
+ ❖ -ban <mention> <reason> ➾ لحظر الأعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $clear ➾ لمسح الشات
+ ❖ -clear ➾ لمسح الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
- ❖ $mute < mention > ➾ لإعطاء ميوت للإعضاء
+ ❖ -mute < mention > ➾ لإعطاء ميوت للإعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $unmute <mention> ➾ لفك الميوت عن الأعضاء
+ ❖ -unmute <mention> ➾ لفك الميوت عن الأعضاء
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
- ❖ $bc <message> ➾ لإرسال رسالة جماعية
+ ❖ -bc <message> ➾ لإرسال رسالة جماعية
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $closeroms ➾ لإغلاق الشات
+ ❖ -closeroms ➾ لإغلاق الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
- ❖ $openroms  ➾ لفتح الشات
+ ❖ -openroms  ➾ لفتح الشات
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $server  ➾ لمعرفة نبذه عن السيرفر
+ ❖ -server  ➾ لمعرفة نبذه عن السيرفر
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- ❖ $warn  <mention> <reason> ➾ لإعطاء انذار لأحد الأعضاء
+ ❖ -warn  <mention> <reason> ➾ لإعطاء انذار لأحد الأعضاء
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 By abokhalil
@@ -934,7 +934,7 @@ By abokhalil
 
 
 client.on('message', abokhalil => {
-  if (abokhalil.content.startsWith('$mute')) {
+  if (abokhalil.content.startsWith('-mute')) {
 if (!abokhalil.member.hasPermission("MANAGE_MESSAGES")) return abokhalil.channel.send("**يجب ان تكون من المشرفين لإعطاء ميوت كتابي**");
 let men = abokhalil.mentions.users.first()
 let mas = abokhalil.author
@@ -965,7 +965,7 @@ abokhalil.channel.sendEmbed(Embed11).then(abokhalil => {abokhalil.delete(6000)})
 
 
 client.on('message', abokhalil => {
-  if (abokhalil.content.startsWith('$unmute')) {
+  if (abokhalil.content.startsWith('-unmute')) {
 if (!abokhalil.member.hasPermission("MANAGE_MESSAGES")) return abokhalil.channel.send("**يجب ان تكون من المشرفين لفك الميوت الكتابي**");
 let men = abokhalil.mentions.users.first()
 let mas = abokhalil.author
@@ -979,7 +979,7 @@ const embed = new Discord.RichEmbed()
 .setColor("RANDOM")
 .setDescription(`**
 ..:::: LG Server ::::..
-لقد تم  فك الميوت الكتابي
+لقد تم  فك الميوت عنك
 بواسطة : <@${abokhalil.author.id}> **`)
           
 client.users.get(men.id).sendEmbed(embed)

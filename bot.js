@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const developers = ["431007974581075970" , "463272623548137483" , "370828320910213131"] // هنا يتم وضع ايدي اونر البوت
-const prefix = '$' // هنا يتم وضع البرفكس الخاص بالبوت
+const prefix = '-' // هنا يتم وضع البرفكس الخاص بالبوت
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -66,7 +66,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .kickable) return message.reply("**لايمكن طرد شخص يمتلك رتبة اكبر من رتبة البوت**");
 
   message.guild.member(user).kick();
 
@@ -260,7 +260,7 @@ client.on('message', message => {
 client.on('message', message => {
 
 if (message.author.bot) return;
-    if (message.content === "$closeroms") {
+    if (message.content === "-closeroms") {
                         if(!message.channel.guild) return message.reply(' عزيزي , هذه الأوامر فقط للسيرفرات ');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**عزيزي , انت لست من المشرفين لتستعمل هذه الخاصية**');
@@ -271,7 +271,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**ع�
                message.reply("**تم إقفال شات ✅ , ولا يمكن لأحد التحدث عدا المشرفين**")
            });
              }
-if (message.content === "$openroms") {
+if (message.content === "-openroms") {
     if(!message.channel.guild) return message.reply('**عزيزي , هذه الأوامر فقط للسيرفرات**');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('يجب ان تكون مسؤول الرسائل , او ان تكون مشرفاً');
@@ -292,7 +292,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('يج�
 
 
 client.on("message", message => {
-      if (message.content === "$ping") {
+      if (message.content === "-ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('** : سرعة الإتصال هي**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -421,7 +421,7 @@ client.on('message', message => {
         msg.react('❌').then(r=>{
 
 
-       
+  // 🇬 🇭 🇮 🇯 🇰 🇱 🇲 🇳 🇴 🇵     
    
 
 

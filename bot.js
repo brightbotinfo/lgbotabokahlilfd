@@ -696,6 +696,23 @@ client.on('message', message => {
 }); 
 
 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('wtf')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "By Abo Khalil"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
+
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -714,6 +731,40 @@ client.on('message', message => {
      
 }); 
 
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('fuc')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "By Abo Khalil"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('fu*')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "By Abo Khalil"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)

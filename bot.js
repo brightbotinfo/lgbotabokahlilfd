@@ -1069,10 +1069,10 @@ message.channel.send({embed});
 client.on('message',message =>{
     if(message.content.startsWith(prefix + 'invs')) {
   message.guild.fetchInvites().then(i =>{
-  var invites = [];
+  let invites = [];
    
   i.forEach(inv =>{
-    var [invs,i]=[{},null];
+    let [invs,i]=[{},null];
      
     if(inv.maxUses){
         invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
@@ -1082,7 +1082,7 @@ client.on('message',message =>{
         invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
    
   });
-  var embed = new Discord.RichEmbed()
+  let embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
   .setThumbnail("https://i.imgur.com/OM00xyh.png")

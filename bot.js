@@ -852,7 +852,9 @@ client.on('message', message => {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ❖ -myinv ➾ لمعرفة عدد الدعوات الخاصة بك
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-❖ -topinv ➾ لمعرفة توب الانفايت في السيرفر
+❖ -invs ➾ لمعرفة توب الانفايت في السيرفر
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+❖ -help-admin ➾ لمعرفة اوامر المشرفين 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  .:::: LG Server ::::.
 
@@ -1065,7 +1067,7 @@ message.channel.send({embed});
 });
          
 client.on('message',message =>{
-    if(message.content.startsWith(prefix + 'topinv')) {
+    if(message.content.startsWith(prefix + 'invs')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
    
